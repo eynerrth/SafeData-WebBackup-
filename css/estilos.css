@@ -1,0 +1,213 @@
+/*
+1.BÁSICO
+Establece el box-sizing para facilitar el cálculo de anchos y alturas */
+*, *::before, *::after {
+  box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total del elemento */
+}
+
+/* Elimina el margen por defecto del body y establece una tipografía base */
+body {
+  margin: 0; /*Configura el margen del body */
+  font-family: "UrbanStone.otf"; /* Fuente de respaldo */
+  line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+  color: #333; /* Color de texto principal */
+  background-color: #182e51; /* Un color de fondo suave para la página */
+}
+
+/*
+  2. ESTILOS DE TIPOGRAFÍA Y ENCABEZADOS
+*/
+
+
+p {
+  margin-bottom: 1em; /* Espacio debajo de los párrafos */
+}
+
+/*
+  3. ESTILOS DE ENLACES
+*/
+
+a {
+  color: #3498db; /* Color por defecto de los enlaces (azul) */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  transition: color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+a:hover {
+  color: #2980b9; /* Color de enlace cuando el ratón está encima */
+  text-decoration: ; /* Muestra el subrayado al pasar el ratón */
+}
+
+/*
+  4. LAYOUT / ESTRUCTURA BÁSICA
+*/
+
+/* Contenedor principal para centrar el contenido y limitar su ancho */
+
+
+/* Estilo para la cabecera (header) */
+header {
+  background-color: #2862bf; /* Color de fondo para la cabecera */
+  height: 120px;
+  border-top: #182e51 solid 30px;
+  font-family: Skateordie;
+  font-size: 40px;
+}
+
+header h1 {
+  color: black;
+  padding-top: 20px;
+}
+
+
+/* Estilo para el menú de navegación (nav) */
+nav {
+  height: 190px;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav ul {
+  list-style: none; /* Elimina los puntos/viñetas de la lista */
+  background-color: #182e51; /* Color de fondo para la barra de navegación */
+  padding: 0; /* Configura el padding por defecto */
+  margin: 0; /* Configura el margen por defecto */
+  display: flex; /* Utiliza Flexbox para colocar los elementos del menú en fila */
+  justify-content:center; /* Alinea los elementos */
+  font-style: normal; /* Asegura el estilo normal (el valor 'no' no es válido en CSS, se corrige a 'normal') */
+  font-family: VERMONT;
+  font-size: 25px;
+}
+
+nav ul li {
+  margin-left: 40px; /* Espacio entre cada elemento del menú */
+}
+
+/* Estilo para los enlaces de navegación */
+nav a {
+  color: #ffffff; /* Color de texto para los enlaces del menú */
+  text-decoration: none; /* Elimina el subrayado por defecto en los enlaces */
+}
+
+.contenedor {
+  width: 100%; /* El % que cupa del ancho de la pantalla */
+  max-width: 1200px; /* Límite máximo de ancho para que no sea demasiado grande en pantallas amplias */
+  margin: 0 auto; /* Centra el contenedor horizontalmente (margen superior/inferior 0, izquierdo/derecho auto) */
+  /*padding: 20px; /* Espaciado interno para que el contenido no toque los bordes */
+  display: flex; /* Utiliza Flexbox para colocar los elementos hijos (main y aside) en línea */
+}
+
+/* --- SECCIÓN PRINCIPAL (main) --- */
+main {
+  background-color: #e4d9d2; /* Color de fondo de la columna principal (cuerpo del contenido) */
+  padding: 10px; /* Relleno interno */
+  width: 80%; /* Ocupa el 80% del ancho disponible en el .contenedor */
+}
+/* --- SECCIONES DENTRO DEL MAIN --- */
+section {
+  background-color: #BCD5C0; /* Color de fondo para cada sección */
+  padding: 10px; /* Relleno interno */
+  margin-bottom: 15px; /*Espacio para separar las secciones */
+  /* Ajustes de fuentes y textos */
+  font-family: Inter, sans-serif; /* Fuente específica para el contenido de la sección */
+  color: #00652E; /* Color de texto para la sección */
+}
+
+/* --- ARTÍCULOS DENTRO DE LAS SECCIONES --- */
+article {
+  background-color: #f0f0f0; /* Color de fondo para cada artículo */
+  padding: 9px; /* Relleno interno */
+  margin-bottom: 10px; /*Espacio para separar los artículos */
+  /* Ajustes de fuentes y textos */
+  color: #333333; /* Color de texto para el artículo */
+  font-family: "Liberation Sans Narrow", sans-serif; /* Fuente específica para el artículo */
+  font-style: italic; /* Texto en cursiva para el artículo */
+}
+
+article a {
+  color: #00652E; /* Color de los enlaces dentro de los artículos*/
+}
+
+/* --- BARRA LATERAL (aside) --- */
+aside {
+  background-color: #A0AD9C; /* Color de fondo para la barra lateral*/
+  padding: 20px; /* Relleno interno */
+  width: 20%; /* Ocupa el 20% del ancho disponible en el .contenedor */
+  /* Ajustes de fuentes y textos */
+  font-family: Inter, sans-serif; /* Fuente específica para el contenido de la barra lateral */
+  color: #1F402F; /* Color de texto oscuro para el aside */
+}
+
+/* Estilo para el pie de página (footer) */
+footer {
+  background-color: #34495e; /* Color para el pie de página */
+  color: white; /* Color de texto */
+  text-align: center; /* Centra el texto */
+  padding: 20px 0; /* Relleno vertical */
+  margin-top: 30px; /* Espacio superior para separarlo del contenido principal */
+}
+
+/*
+  5. ESTILOS DE BOTONES
+*/
+
+.button {
+  display: inline-block; /* Permite aplicar padding y dimensiones, pero se mantiene en línea con el texto */
+  padding: 10px 20px; /* Relleno interno del botón */
+  background-color: #e74c3c; /* Color de fondo*/
+  color: white; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+.button:hover {
+  background-color: #c0392b; /* Color de fondo más oscuro al pasar el ratón */
+}
+
+/*
+  6. ESTILOS DE IMÁGENES
+*/
+
+img {
+  max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen al redimensionar */
+  display: block; /* Elimina el espacio extra que algunos navegadores añaden debajo de las imágenes */
+}
+
+/* --- AJUSTE DE IMAGEN DENTRO DE ARTICLE --- */
+article img {
+  width: 50%; /* Lo que la imagen ocupará en <article> padre */
+  padding-left: 90px; /* Relleno a la izquierda de la imagen */
+  padding-right: 50px; /* Relleno a la derecha de la imagen */
+  margin: 0 auto; /*Intenta centrar la imagen si el ancho es menor al 100% */
+}
+
+/* --- AJUSTE DE IMAGEN DENTRO DE ASIDE (Aportado por el usuario) --- */
+aside a img {
+  width: 100%; /* La imagen ocupará el 100% del ancho disponible en su contenedor <a> */
+}
+
+
+/*
+DECLARACIÓN DE FUENTE LOCAL (usando @font-face)
+*/
+
+@font-face {
+  font-family: 'Skateordie'; /* 1. font-family: Define el nombre que se usará para referirse a la fuente */
+  /* 2. src: Define la ruta a tu archivo de fuente y el formato */
+  src: url(../fonts/Skateordie.ttf); /* Formato moderno*/
+}
+
+@font-face{
+	font-family: "UrbanStone";
+	src: url(../fonts/UrbanStone.otf);
+}
+@font-face{
+	font-family: "VERMONT";
+	src: url(../fonts/VERMONT.ttf);
+}
